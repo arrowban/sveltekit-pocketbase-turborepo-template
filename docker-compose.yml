@@ -1,0 +1,20 @@
+services:
+  pocketbase:
+    build:
+      context: ./apps/pocketbase
+      args:
+        - VERSION=0.22.18
+    container_name: pocketbase
+    restart: unless-stopped
+    ports:
+      - '8090:8090'
+    volumes:
+      - ./apps/pocketbase/pb_data:/pb_data
+      - ./apps/pocketbase/pb_migrations:/pb_migrations
+      # - /path/to/public:/pb_public
+      # - /path/to/hooks:/pb_hooks
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:8090/api/health || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 5
