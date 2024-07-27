@@ -1,32 +1,65 @@
-# Turborepo Svelte starter
+# SvelteKit, Pocketbase, Turborepo Template
 
-This is an official starter Turborepo.
+A template for an extensible SvelteKit + Pocketbase + Turborepo codebase.
 
-## Using this example
+Authentication flows are already set up, and key architecture decisions have already been made; dive right into building what matters.
 
-Run the following command:
+## Requirements
+
+[Node.js](https://nodejs.org), and [Docker Desktop](https://www.docker.com/products/docker-desktop) ([Docker](https://www.docker.com) + [Docker Compose](https://docs.docker.com/compose)). Make sure docker is running before getting started.
+
+## Getting started
+
+Clone the template using the "use this template" button on GitHub, or run the following commands:
 
 ```sh
-npx create-turbo@latest -e with-svelte
+git clone --depth=1 --branch=main https://github.com/arrowban/sveltekit-pocketbase-turborepo-template.git my-app
+rm -rf ./my-app/.git
 ```
 
-## What's inside?
+### Set up the development environment
 
-This Turborepo includes the following packages/apps:
+1.  Install dependencies:
+
+    ```sh
+    npm install
+    ```
+
+2.  Set up environment variables:
+
+    ```sh
+    cp ./apps/web/.env.example ./apps/web/.env.local
+    ```
+
+3.  Start the development server and backend
+
+    ```sh
+    npm run dev
+    ```
+
+4.  Visit http://localhost:8090/\_/ to create an admin account for the backend
+5.  Update environment variables in `./apps/web/.env.local` with your admin credentials:
+
+    ```
+    POCKETBASE_ADMIN_EMAIL=youremail@example.com
+    POCKETBASE_ADMIN_PASSWORD=your-strong-password
+    PUBLIC_POCKETBASE_BASE_URL=http://localhost:8090
+    ```
+
+## The code
+
+This template includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [svelte-kit](https://kit.svelte.dev/) app
-- `web`: another [svelte-kit](https://kit.svelte.dev/) app
-- `ui`: a stub Svelte component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-plugin-svelte` and `eslint-config-prettier`)
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- `pocketbase`: Dockerized [Pocketbase](https://pocketbase.io) backend
+- `web`: [SvelteKit](https://kit.svelte.dev) app
+- `eslint-config-custom`: `eslint` configurations
 
 ### Utilities
 
-This Turborepo has some additional tools already setup for you:
+This template has some additional tools already setup for you:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
+- [TypeScript](https://www.typescriptlang.org) for static type checking
+- [ESLint](https://eslint.org) for code linting
 - [Prettier](https://prettier.io) for code formatting
