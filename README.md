@@ -37,7 +37,7 @@ rm -rf ./my-app/.git
     npm run dev
     ```
 
-4.  Visit http://localhost:8090/\_/ to create an admin account for the backend
+4.  Go to [the admin dashboard](http://localhost:8090/_) to create an admin account for the local backend
 5.  Update environment variables in `./apps/web/.env.local` with your admin credentials:
 
     ```
@@ -48,13 +48,11 @@ rm -rf ./my-app/.git
 
 ## The code
 
-This template includes the following packages/apps:
-
 ### Apps and Packages
 
-- `pocketbase`: Dockerized [Pocketbase](https://pocketbase.io) backend
-- `web`: [SvelteKit](https://kit.svelte.dev) app
-- `eslint-config-custom`: `eslint` configurations
+- `apps/pocketbase`: Dockerized [Pocketbase](https://pocketbase.io) backend
+- `apps/web`: [SvelteKit](https://kit.svelte.dev) app
+- `packages/eslint-config-custom`: `eslint` configurations
 
 ### Utilities
 
