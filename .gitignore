@@ -28,6 +28,3 @@ yarn-error.log*
 
 # turbo
 .turbo
-
-# pocketbase
-pb_data
