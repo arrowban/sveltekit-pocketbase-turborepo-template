@@ -15,7 +15,7 @@
   "engines": {
     "node": ">=18"
   },
-  "name": "with-svelte",
+  "name": "sveltekit-pocketbase-turborepo-template",
   "packageManager": "npm@10.2.5",
   "workspaces": [
     "apps/*",
