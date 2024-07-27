@@ -15,7 +15,8 @@
 		"test:unit": "vitest"
 	},
 	"dependencies": {
-		"@repo/ui": "*"
+		"@repo/ui": "*",
+		"pocketbase": "^0.21.3"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.42.1",
