@@ -26,6 +26,7 @@
 		"@typescript-eslint/eslint-plugin": "^7.1.0",
 		"@typescript-eslint/parser": "^7.1.0",
 		"autoprefixer": "^10.4.19",
+		"daisyui": "^4.12.10",
 		"eslint": "^8.57.0",
 		"postcss": "^8.4.40",
 		"prettier": "^3.2.5",
