@@ -1,4 +1,4 @@
-// import { POCKETBASE_ADMIN_EMAIL, POCKETBASE_ADMIN_PASSWORD } from '$env/static/private';
+import { POCKETBASE_ADMIN_EMAIL, POCKETBASE_ADMIN_PASSWORD } from '$env/static/private';
 import { newPocketBase } from '$lib/server/pocketbase';
 import { json } from '@sveltejs/kit';
 
@@ -10,7 +10,7 @@ export async function POST({ request }) {
 		const { email, password, passwordConfirm } = body;
 
 		const pb = newPocketBase();
-		// await pb.admins.authWithPassword(POCKETBASE_ADMIN_EMAIL, POCKETBASE_ADMIN_PASSWORD);
+		await pb.admins.authWithPassword(POCKETBASE_ADMIN_EMAIL, POCKETBASE_ADMIN_PASSWORD);
 		const createUserRecordModel = await pb
 			.collection('users')
 			.create({ email, password, passwordConfirm });
