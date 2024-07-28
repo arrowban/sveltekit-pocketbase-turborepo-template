@@ -32,7 +32,7 @@
 	<div class="flex w-full flex-col items-center gap-8 p-4 lg:max-w-screen-md lg:flex-row">
 		<div class="card bg-base-300 w-full max-w-sm shadow-2xl">
 			<form on:submit|preventDefault={onSubmit} class="card-body">
-				<h1 class="card-title">Login to your account</h1>
+				<h1 class="card-title">Sign in to your account</h1>
 				<div class="form-control">
 					<label class="label" for="email">
 						<span class="label-text">Email</span>
@@ -69,7 +69,7 @@
 						{#if loading}
 							<div class="loading loading-spinner" />
 						{:else}
-							Login
+							Sign in
 						{/if}
 					</button>
 					{#if error}
