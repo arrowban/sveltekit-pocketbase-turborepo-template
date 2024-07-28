@@ -1,5 +1,4 @@
 ![landing-preview-light](https://github.com/user-attachments/assets/497ca0f4-90ed-422c-8997-7fbd3b85f0a6)
-![landing-preview-dark](https://github.com/user-attachments/assets/d9995fdf-7c81-4679-bf81-aef7dfd24401)
 
 # SvelteKit, Pocketbase, Turborepo Template
 
@@ -7,6 +6,8 @@ A template for an extensible SvelteKit + Pocketbase + Turborepo codebase.
 
 Minimal authentication flows are already set up, and key architecture decisions have already been made; dive right into building what matters.
 
+### Screenshots
+![landing-preview-dark](https://github.com/user-attachments/assets/d9995fdf-7c81-4679-bf81-aef7dfd24401)
 ![login-preview-light](https://github.com/user-attachments/assets/1c285868-080b-42d7-97fe-14c466976fa4)
 ![login-preview-dark](https://github.com/user-attachments/assets/8ccaa4cb-acc5-4652-b428-b9c030d41568)
 ![home-preview-light](https://github.com/user-attachments/assets/cc769c39-224f-47f8-89c5-0215ca832a74)
