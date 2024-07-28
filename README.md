@@ -22,6 +22,8 @@ Comes with...
 
 ![landing-preview-light](https://github.com/user-attachments/assets/497ca0f4-90ed-422c-8997-7fbd3b85f0a6)
 ![landing-preview-dark](https://github.com/user-attachments/assets/d9995fdf-7c81-4679-bf81-aef7dfd24401)
+![sign-in-preview-light](https://github.com/user-attachments/assets/0a183d67-9f0e-404c-9ad9-69d3edf94466)
+![sign-in-preview-dark](https://github.com/user-attachments/assets/f08f06ee-4701-4019-bfe8-50fe7db223f6)
 ![home-preview-light](https://github.com/user-attachments/assets/cc769c39-224f-47f8-89c5-0215ca832a74)
 ![home-preview-dark](https://github.com/user-attachments/assets/090f1337-6c46-49c2-90fd-ba2a722cad17)
 
