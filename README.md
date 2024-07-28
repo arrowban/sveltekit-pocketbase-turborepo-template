@@ -13,7 +13,7 @@ Comes with...
 - [Requirements](#requirements)
 - [Getting started](#getting-started)
   - [Set up the development environment](#set-up-the-development-environment)
-  - [Consider doing before going to production](#consider-doing-before-going-to-production)
+  - [Getting ready for production](#getting-ready-for-production)
 - [The code](#the-code)
   - [Apps and Packages](#apps-and-packages)
   - [Utilities](#utilities)
@@ -77,10 +77,12 @@ git commit -m "Initial commit"
 
 6.  [Create an account](http://localhost:5173/create-account) on the local web app, and [start building](http://localhost:5173/home)!
 
-### Consider doing before going to production
+### Getting ready for production
+
+Things to consider before setting up production deployments.
 
 1. [Add SMTP server settings](https://pocketbase.io/docs/going-to-production/#use-smtp-mail-server) for sending verification and reset password emails. Consider turning on the "Forbid authentication for unverified users" option for the users table
-2. [Add a social login](https://pocketbase.io/docs/authentication/#oauth2-integration)
+2. [Integrate OAuth2 providers](https://pocketbase.io/docs/authentication/#oauth2-integration)
 
 ## The code
 
