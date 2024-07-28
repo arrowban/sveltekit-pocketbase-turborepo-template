@@ -55,7 +55,7 @@
 					</div>
 				{/if}
 				<div class="form-control mt-6 gap-4">
-					<button on:click={success ? () => goto('/login') : undefined} class="btn btn-primary">
+					<button on:click={success ? () => goto('/sign-in') : undefined} class="btn btn-primary">
 						{#if loading}
 							<div class="loading loading-spinner" />
 						{:else if success}
@@ -72,7 +72,7 @@
 		</div>
 		<div class="text-center font-semibold sm:text-lg lg:text-right">
 			<p>Remember your password?</p>
-			<a href="/login" class="link-hover link link-secondary">Click here to login.</a>
+			<a href="/sign-in" class="link-hover link link-secondary">Click here to sign in.</a>
 		</div>
 	</div>
 </div>

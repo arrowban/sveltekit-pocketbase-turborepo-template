@@ -111,7 +111,7 @@
 		</div>
 		<div class="text-center font-semibold sm:text-lg lg:text-right">
 			<p>Already have an account?</p>
-			<a href="/login" class="link-hover link link-secondary">Click here to login.</a>
+			<a href="/sign-in" class="link-hover link link-secondary">Click here to sign in.</a>
 		</div>
 	</div>
 </div>

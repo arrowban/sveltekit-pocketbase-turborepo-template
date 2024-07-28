@@ -4,7 +4,7 @@
 
 	async function signOut() {
 		pb.authStore.clear();
-		await goto('/login');
+		await goto('/sign-in');
 	}
 </script>
 
