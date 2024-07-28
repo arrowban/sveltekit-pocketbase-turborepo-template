@@ -2,7 +2,7 @@
 
 A template for an extensible SvelteKit + Pocketbase + Turborepo codebase.
 
-Authentication flows are already set up, and key architecture decisions have already been made; dive right into building what matters.
+Minimal authentication flows are already set up, and key architecture decisions have already been made; dive right into building what matters.
 
 ## Requirements
 
@@ -10,7 +10,7 @@ Authentication flows are already set up, and key architecture decisions have alr
 
 ## Getting started
 
-Clone the template using the "use this template" button on GitHub, or run the following commands:
+Create a new repository with the "use this template" button on GitHub, or run the following commands:
 
 ```sh
 git clone --depth=1 --branch=main https://github.com/arrowban/sveltekit-pocketbase-turborepo-template.git my-app
@@ -43,7 +43,7 @@ git commit -m "Initial commit"
     npm run dev
     ```
 
-4.  Go to [the admin dashboard](http://localhost:8090/_) to create an admin account for the local backend
+4.  Go to [the local Pocketbase admin settings page](http://localhost:8090/_) to create an admin account for the local backend
 5.  Update environment variables in `apps/web/.env.local` with your admin credentials:
 
     ```
@@ -51,6 +51,13 @@ git commit -m "Initial commit"
     POCKETBASE_ADMIN_PASSWORD=your-strong-password
     PUBLIC_POCKETBASE_BASE_URL=http://localhost:8090
     ```
+
+6.  [Create an account](http://localhost:5173/create-account) on the local web app, and [start building](http://localhost:5173/home)!
+
+### Consider doing before going to production
+
+1. [Add SMTP server settings](https://pocketbase.io/docs/going-to-production/#use-smtp-mail-server) for sending verification and reset password emails. Consider turning on the "Forbid authentication for unverified users" option for the users table
+2. [Add a social login](https://pocketbase.io/docs/authentication/#oauth2-integration)
 
 ## The code
 
