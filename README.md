@@ -14,7 +14,13 @@ Clone the template using the "use this template" button on GitHub, or run the fo
 
 ```sh
 git clone --depth=1 --branch=main https://github.com/arrowban/sveltekit-pocketbase-turborepo-template.git my-app
-rm -rf ./my-app/.git
+
+cd my-app
+rm -rf .git
+
+git init
+git add -A
+git commit -m "Initial commit"
 ```
 
 ### Set up the development environment
@@ -28,7 +34,7 @@ rm -rf ./my-app/.git
 2.  Set up environment variables:
 
     ```sh
-    cp ./apps/web/.env.example ./apps/web/.env.local
+    cp apps/web/.env.example apps/web/.env.local
     ```
 
 3.  Start the development server and backend
@@ -38,7 +44,7 @@ rm -rf ./my-app/.git
     ```
 
 4.  Go to [the admin dashboard](http://localhost:8090/_) to create an admin account for the local backend
-5.  Update environment variables in `./apps/web/.env.local` with your admin credentials:
+5.  Update environment variables in `apps/web/.env.local` with your admin credentials:
 
     ```
     POCKETBASE_ADMIN_EMAIL=youremail@example.com
