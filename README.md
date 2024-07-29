@@ -100,14 +100,26 @@ It is straightforward to [host Pocketbase](https://pocketbase.io/docs/going-to-p
 
 1. [Install flyctl](https://fly.io/docs/flyctl/install) – the open-source Fly.io CLI
 2. Create an account with `fly auth signup` or log in with `fly auth login`
-3. Create a new app with `fly apps create --generate-name`
+3. Create a new app
+
+   ```sh
+   fly apps create --generate-name
+   ```
+
 4. Add the generated app name to `apps/pocketbase/fly.toml` (line 1)
 5. [Choose the region](https://fly.io/docs/reference/regions) closest to you (or your users) and add the corresponding region ID as the `primary_region` in `apps/pocketbase/fly.toml` (line 2)
-6. Create a new volume with `fly volumes create pb_data --size=1`, using the same region as the one you chose in step 5
+6. Create a new volume, using the same region as the one you chose in step 5 (size can easily be [extended anytime](https://fly.io/docs/volumes/volume-manage/#extend-a-volume))
 
-   - The `--size=1` option creates a volume with 1GB of storage, this can be [easily extended anytime](https://fly.io/docs/volumes/volume-manage/#extend-a-volume)
+   ```sh
+   fly volumes create pb_data --size=1 # Creates a volume with 1GB of storage
+   ```
 
-7. Deploy the Pocketbase server with `npm run deploy`, and run this command again anytime you want to update the deployment after making local changes
+7. Deploy the Pocketbase server, and run this command again anytime you want to update the deployment after making changes locally
+
+   ```sh
+   npm run deploy
+   ```
+
 8. Go to the production Pocketbase admin settings page at `https://APP_NAME.fly.dev/_` to create an admin account for the production backend
 9. Add production environment variables to a new file `apps/web/.env.production` with your production admin credentials:
 
