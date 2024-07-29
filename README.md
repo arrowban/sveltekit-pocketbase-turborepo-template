@@ -7,6 +7,8 @@ Comes with...
 - **MVP authentication flows:** Minimal `/`, `/create-account`, `/sign-in`, `/reset-password`, and `/home` pages
 - **TailwindCSS and DaisyUI:** [Customize the theme](https://daisyui.com/docs/themes), [semantic UI component library](https://daisyui.com)
 
+See the live demo [here](https://sveltekit-pocketbase-turborepo-template.pages.dev), deployed directly from the `demo` branch of this repository.
+
 ### Sections
 
 - [Screenshots](#screenshots)
