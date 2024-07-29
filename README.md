@@ -4,8 +4,9 @@ A template for an extensible SvelteKit + Pocketbase + Turborepo codebase.
 
 Comes with...
 
-- **MVP authentication flows:** Minimal `/`, `/create-account`, `/sign-in`, `/reset-password`, and `/home` pages
 - **TailwindCSS and DaisyUI:** [Customize the theme](https://daisyui.com/docs/themes), [semantic UI component library](https://daisyui.com)
+- **Pre-built account creation, sign in, and reset password flows**
+- **Deployment configuration for Pocketbase on [Fly.io](https://fly.io)**
 
 See the live demo [here](https://sveltekit-pocketbase-turborepo-template.pages.dev), deployed directly from the `demo` branch of this repository.
 
@@ -84,9 +85,11 @@ git commit -m "Initial commit"
 
 ## Production deployments
 
-Things to consider before setting up production deployments:
+Things to consider for production deployments:
 
-1. [Add SMTP server settings](https://pocketbase.io/docs/going-to-production/#use-smtp-mail-server) for sending verification and reset password emails. Consider turning on the "Forbid authentication for unverified users" option for the users table
+1. [Add SMTP server settings](https://pocketbase.io/docs/going-to-production/#use-smtp-mail-server) for sending verification and reset password emails
+   - Consider turning on the "Forbid authentication for unverified users" option for the users table
+   - Remember to edit the email templates from the Pocketbase admin settings after deploying
 2. [Integrate OAuth2 providers](https://pocketbase.io/docs/authentication/#oauth2-integration)
 
 ### Deploy the backend
@@ -114,7 +117,7 @@ It is straightforward to [host Pocketbase](https://pocketbase.io/docs/going-to-p
    PUBLIC_POCKETBASE_BASE_URL=https://APP_NAME.fly.dev
    ```
 
-The pre-configured VM is the cheapest available on Fly.io (`shared-cpu-1x` with 256MB of memory), [scale the backend vertically](https://fly.io/docs/launch/scale-machine) as the app grows.
+The pre-configured VM is the cheapest available on Fly.io (`shared-cpu-1x` with 256MB of memory), [scale the backend vertically](https://fly.io/docs/launch/scale-machine) as your app grows.
 
 ### Deploy the web app
 
