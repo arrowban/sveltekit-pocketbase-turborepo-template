@@ -14,9 +14,9 @@ Comes with...
 - [Getting started](#getting-started)
   - [Set up the development environment](#set-up-the-development-environment)
 - [Production deployments](#production-deployments)
-  - [Deploy the web app](#deploy-the-web-app)
   - [Deploy the backend](#deploy-the-backend)
     - [Deploy on Fly.io](#deploy-on-flyio)
+  - [Deploy the web app](#deploy-the-web-app)
 - [The code](#the-code)
   - [Apps and Packages](#apps-and-packages)
   - [Utilities](#utilities)
@@ -87,18 +87,6 @@ Things to consider before setting up production deployments:
 1. [Add SMTP server settings](https://pocketbase.io/docs/going-to-production/#use-smtp-mail-server) for sending verification and reset password emails. Consider turning on the "Forbid authentication for unverified users" option for the users table
 2. [Integrate OAuth2 providers](https://pocketbase.io/docs/authentication/#oauth2-integration)
 
-### Deploy the web app
-
-Many cloud platforms provide generous free tiers for deploying web apps built with popular frameworks like SvelteKit. Cloudflare, Vercel, and Netlify are just a few examples of platforms that integrate directly with GitHub repositories and provide seamless CI/CD.
-
-When setting up your first deployment on any of these platforms, remember to:
-
-- Replace `@sveltejs/adapter-auto` with the [appropriate adapter](https://kit.svelte.dev/docs/adapters) in `apps/web/svelte.config.js`
-- Specify `apps/web` as the root of the web app
-- Add environment variables from `apps/web/.env.local` to the deployment
-
-**I strongly recommend deploying the web app with [Cloudflare pages](https://pages.cloudflare.com).**
-
 ### Deploy the backend
 
 It is straightforward to [host Pocketbase](https://pocketbase.io/docs/going-to-production/#deployment-strategies) on any VPS. This template comes configured for easy deployment of Pocketbase on [Fly.io](https://fly.io).
@@ -114,9 +102,29 @@ It is straightforward to [host Pocketbase](https://pocketbase.io/docs/going-to-p
 
    - The `--size=1` option creates a volume with 1GB of storage, this can be [easily extended anytime](https://fly.io/docs/volumes/volume-manage/#extend-a-volume)
 
-7. Deploy the Pocketbase server with `npm run deploy`, and run this command again to update the deployment after making local changes
+7. Deploy the Pocketbase server with `npm run deploy`, and run this command again anytime you want to update the deployment after making local changes
+8. Go to the production Pocketbase admin settings page at `https://APP_NAME.fly.dev/_` to create an admin account for the production backend
+9. Add production environment variables to a new file `apps/web/.env.production` with your production admin credentials:
+
+   ```
+   POCKETBASE_ADMIN_EMAIL=youremail@example.com
+   POCKETBASE_ADMIN_PASSWORD=your-strong-password
+   PUBLIC_POCKETBASE_BASE_URL=https://APP_NAME.fly.dev
+   ```
 
 The pre-configured VM is the cheapest available on Fly.io (`shared-cpu-1x` with 256MB of memory), [scale the backend vertically](https://fly.io/docs/launch/scale-machine) as the app grows.
+
+### Deploy the web app
+
+Many cloud platforms provide generous free tiers for deploying web apps built with popular frameworks like SvelteKit. Cloudflare, Vercel, and Netlify are just a few examples of platforms that integrate directly with GitHub repositories and provide seamless CI/CD.
+
+When setting up your first deployment on any of these platforms, remember to:
+
+- Replace `@sveltejs/adapter-auto` with the [appropriate adapter](https://kit.svelte.dev/docs/adapters) in `apps/web/svelte.config.js`
+- Specify `apps/web` as the root of the web app
+- Add environment variables from `apps/web/.env.production` to the deployment
+
+**I strongly recommend deploying the web app with [Cloudflare pages](https://pages.cloudflare.com).**
 
 ## The code
 
