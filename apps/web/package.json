@@ -15,7 +15,6 @@
 		"test:unit": "vitest"
 	},
 	"dependencies": {
-		"@repo/ui": "*",
 		"pocketbase": "^0.21.3"
 	},
 	"devDependencies": {
