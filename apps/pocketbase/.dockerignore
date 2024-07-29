@@ -1,0 +1,4 @@
+# flyctl launch added from pb_data/.gitignore
+pb_data/**/*
+!pb_data/**/.gitignore
+fly.toml
