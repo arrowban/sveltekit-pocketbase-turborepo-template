@@ -10,6 +10,7 @@ services:
       - '8090:8090'
     volumes:
       - ./apps/pocketbase/pb_data:/pb_data
+      - ./apps/pocketbase/pb_migrations:/pb_migrations
       # - /path/to/public:/pb_public
       # - /path/to/hooks:/pb_hooks
     healthcheck:
