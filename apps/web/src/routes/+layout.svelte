@@ -1,6 +1,4 @@
 <script>
-	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
 	import { pb } from '$lib/pocketbase';
 	import { onMount, setContext } from 'svelte';
 	import { writable } from 'svelte/store';
@@ -18,12 +16,6 @@
 				localStorage.setItem('hasSignedIn', 'true');
 			}
 		}, true);
-
-		if (!$user && $page.url.pathname === '/home') {
-			goto('/');
-		} else if ($user && ['/', '/sign-in', '/create-account'].includes($page.url.pathname)) {
-			goto('/home');
-		}
 		return () => {
 			unsubscribe();
 		};
