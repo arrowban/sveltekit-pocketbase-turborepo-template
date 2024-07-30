@@ -6,6 +6,7 @@ Comes with...
 
 - **TailwindCSS and DaisyUI:** [Customize the theme](https://daisyui.com/docs/themes), [semantic UI component library](https://daisyui.com)
 - **Pre-built account creation, sign in, and reset password flows**
+- **Basic CRUD example**
 - **Deployment configuration for Pocketbase on [Fly.io](https://fly.io)**
 
 See the live demo [here](https://sveltekit-pocketbase-turborepo-template.pages.dev), deployed directly from the `demo` branch of this repository.
@@ -30,8 +31,10 @@ See the live demo [here](https://sveltekit-pocketbase-turborepo-template.pages.d
 ![landing-preview-dark](https://github.com/user-attachments/assets/d9995fdf-7c81-4679-bf81-aef7dfd24401)
 ![sign-in-preview-light](https://github.com/user-attachments/assets/0a183d67-9f0e-404c-9ad9-69d3edf94466)
 ![sign-in-preview-dark](https://github.com/user-attachments/assets/f08f06ee-4701-4019-bfe8-50fe7db223f6)
-![home-preview-light](https://github.com/user-attachments/assets/cc769c39-224f-47f8-89c5-0215ca832a74)
-![home-preview-dark](https://github.com/user-attachments/assets/090f1337-6c46-49c2-90fd-ba2a722cad17)
+![home-preview-light](https://github.com/user-attachments/assets/f4fc8e66-c5b7-4431-bc68-5d38b2120914)
+![home-preview-dark](https://github.com/user-attachments/assets/7fc86aa1-273a-49c6-8794-b1d178af0324)
+![crud-preview-light](https://github.com/user-attachments/assets/e26d22f9-4b8b-41ea-93ae-0f005fa7d6bd)
+![crud-preview-dark](https://github.com/user-attachments/assets/54a0e7a5-b13c-4bfa-b2f8-6e84d551a4fb)
 
 ## Requirements
 
