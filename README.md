@@ -2,8 +2,6 @@
 
 A template for an extensible SvelteKit + Pocketbase + Turborepo codebase.
 
-Supports TypeScript with no additional configuration.
-
 Comes with...
 
 - **TailwindCSS and DaisyUI:** [Customize the theme](https://daisyui.com/docs/themes), [semantic UI component library](https://daisyui.com)
@@ -13,6 +11,7 @@ Comes with...
 
 See the live demo [here](https://sveltekit-pocketbase-turborepo-template.pages.dev), deployed directly from the `demo` branch of this repository.
 
+_Note: The SvelteKit app supports TypeScript with no additional configuration._
 ### Sections
 
 - [Screenshots](#screenshots)
