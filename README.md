@@ -12,6 +12,7 @@ Comes with...
 See the live demo [here](https://sveltekit-pocketbase-turborepo-template.pages.dev), deployed directly from the `demo` branch of this repository.
 
 _Note: The SvelteKit app supports TypeScript with no additional configuration._
+
 ### Sections
 
 - [Screenshots](#screenshots)
