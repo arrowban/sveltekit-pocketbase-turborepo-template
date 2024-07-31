@@ -4,7 +4,7 @@ A template for an extensible SvelteKit + Pocketbase + Turborepo codebase.
 
 Comes with...
 
-- **TailwindCSS and DaisyUI:** [Customize the theme](https://daisyui.com/docs/themes), [semantic UI component library](https://daisyui.com)
+- **TailwindCSS and DaisyUI:** [Customize the theme](https://daisyui.com/docs/themes) and use [semantic components class names](https://daisyui.com/components)
 - **Pre-built account creation, sign in, and reset password flows**
 - **Basic CRUD example**
 - **Deployment configuration for Pocketbase on [Fly.io](https://fly.io)**
