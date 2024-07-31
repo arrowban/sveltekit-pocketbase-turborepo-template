@@ -4,7 +4,6 @@ services:
       context: ./apps/pocketbase
       args:
         - VERSION=0.22.18
-    container_name: pocketbase
     restart: unless-stopped
     ports:
       - '8090:8090'
